@@ -1,0 +1,16 @@
+name: firza_forest_geo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - xarray=2022.6.0
+  - shapely
+  - bottleneck
+  - rasterio
+  - rasterstats
+  - regionmask
+  - rioxarray
+  - netCDF4>=1.5.3
+  - seaborn
+pip:
+  - geopandas
