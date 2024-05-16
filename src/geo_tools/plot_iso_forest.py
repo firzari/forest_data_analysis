@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 
 ### PIPELINE ###
 
-# Plotting and export figure
+# Plotting forest cover
 def plot_forest(iso_code:str, xarray_id: xr.DataArray) -> plt:
 
     """Creating a distribution map of a relevant forest data
@@ -63,7 +63,33 @@ def plot_forest(iso_code:str, xarray_id: xr.DataArray) -> plt:
     ax.set(title=f"{xarray_id}_{iso_code} in 2020")
 
 
-# Calculate total area
+# Plotting forest_type
+def plot_forest_type(iso_code:str, xarray_id: xr.DataArray, forest_type_cat: int) -> plt:
+
+    # Clip array here
+    country_forest, border = clip_array(
+        iso_code,
+        xarray_id
+    )
+
+    # Figure template
+    figure, ax = plt.subplots()
+
+    # Subset to the selected forest type
+    sel_forest_type = country_forest.where(country_forest == forest_type_cat)
+
+    # Plotting forest type
+    sel_forest_type.plot.imshow(ax=ax)
+
+    # Plot administration border
+    border.boundary.plot(ax=ax, edgecolor="black", linewidth=0.5)
+
+    # Additional information
+    ax.axis("off")
+    ax.set(title=f"{xarray_id}_{iso_code} in 2020")
+
+
+# Calculate total area for forest cover
 def agg_total_area(
         iso_code: str, 
         xarray_id: xr.DataArray, 
@@ -131,84 +157,117 @@ def agg_total_area(
     return total_area_df
 
 
-# # Calculate total area and statistics
-# # Need to think the data arch to include forest cover area in the stats description file
-# def calc_stats(iso_code, xarray_id, var_unit):
-    
-#     # Clip array here
-#     country_forest, border = clip_array(
-#         iso_code,
-#         xarray_id
-#     )
+# Calculate area for forest type
+def agg_area_forest_type(iso_code: str, xarray_id: str, forest_type_cat: int, forest_layer_year: int):
 
-#     # Don't forget to select area where values > 0
-#     country_forest_clean = country_forest.where(country_forest > 0)
+    # Clip array here
+    country_forest, border = clip_array(
+        iso_code,
+        xarray_id
+    )
 
-#     convert_to_mha = 1e+6
+    # Subset to the selected forest type
+    sel_forest_type = country_forest.where(country_forest == forest_type_cat)
 
-#     # Calculate total area 
-#     if xarray_id == "Canopy_height":
-#         total_area = (
-#             country_forest_clean
-#             .count(["latitude", "longitude"])
-#             .values
-#             .flatten()[0]
-#         ) / convert_to_mha
-    
-#     else:
-#         total_area = (
-#             country_forest_clean
-#             .sum(["latitude", "longitude"])
-#             .values
-#             .flatten()[0]
-#         ) / convert_to_mha
+    convert_to_mha = 1e+6
 
-#     # Calculate average 
-#     average = (
-#         country_forest_clean
-#         .mean(["latitude", "longitude"])
-#         .values
-#         .flatten()[0]
-#     )
+    total_area = (
+        sel_forest_type
+        .sum(["latitude", "longitude"])
+        .values
+        .flatten()[0]
+    ) / convert_to_mha
 
-#     # Standard deviation
-#     std_dev = (
-#         country_forest_clean
-#         .std(["latitude", "longitude"])
-#         .values
-#         .flatten()[0]
-#     )
+    # Identify variable names
+    if forest_type_cat == 1:
+        var_name = xarray_id.replace("_", " ") + ": Undefined"
+    elif forest_type_cat == 2:
+        var_name = xarray_id.replace("_", " ") + ": Broadleaved"
+    elif forest_type_cat == 3:
+        var_name = xarray_id.replace("_", " ") + ": Coniferous"
+    elif forest_type_cat == 4:
+        var_name = xarray_id.replace("_", " ") + ": Mixed"
 
-#     # Minimum
-#     minimum = (
-#         country_forest_clean
-#         .min(["latitude", "longitude"])
-#         .values
-#         .flatten()[0]
-#     )
+    var_unit = "Million hectares"
 
-#     # Maximum
-#     maximum = (
-#         country_forest_clean
-#         .max(["latitude", "longitude"])
-#         .values
-#         .flatten()[0]
-#     )
+    total_area_df = pd.DataFrame(
+        {
+            "Region" : [iso_code],
+            "Variable" : [var_name],
+            "Year" : [forest_layer_year],
+            "Unit" : [var_unit],
+            "Value" : [total_area]
+        }
+    )
 
-#     # Range
-#     range_vals = maximum - minimum
+    return total_area_df
 
-#     stats_df = pd.DataFrame(
-#         {
-#             "ISO3" : [iso_code],
-#             "Total_area (Mha)" : [total_area],
-#             f"Average ({var_unit})" : [average],
-#             f"Standard deviation ({var_unit})" : [std_dev],
-#             f"Maximum ({var_unit})" : [maximum],
-#             f"Minimum ({var_unit})" : [minimum],
-#             f"Value range ({var_unit})" : [range_vals]
-#         }
-#     )
 
-#     return stats_df
+# Average canopy height
+def avg_canopy_height(iso_code: str, xarray_id: str, forest_layer_year: int):
 
+    # Clip array here
+    country_forest, border = clip_array(
+        iso_code,
+        xarray_id
+    )
+
+    avg_height = (
+        country_forest
+        .mean(["latitude", "longitude"])
+        .values
+        .flatten()[0]
+    )
+
+    # Identify the variable name and the unit
+    var_name = xarray_id.replace("_", " ")
+    var_unit = "Meters"
+
+    avg_height_df = pd.DataFrame(
+        {
+            "Region" : [iso_code],
+            "Variable" : [var_name],
+            "Year" : [forest_layer_year],
+            "Unit" : [var_unit],
+            "Value" : [avg_height]
+        }
+    )
+
+    return avg_height_df
+
+
+def agg_area_natural_forest(iso_code: str, xarray_id: str, forest_layer_year: int, natural_forest:int = 2):
+
+    # Clip array here
+    country_forest, border = clip_array(
+        iso_code,
+        xarray_id
+    )
+
+    # Subset to the selected forest type
+    sel_natural = country_forest.where(country_forest == natural_forest)
+
+    convert_to_mha = 1e+6
+
+    total_area = (
+        sel_natural
+        .count(["latitude", "longitude"])
+        .values
+        .flatten()[0]
+    ) / convert_to_mha
+
+    # Identify the variable name and the unit
+    var_name = xarray_id.replace("_", " ")
+    var_unit = "Million hectares"
+
+    total_area_df = pd.DataFrame(
+        {
+            "Region" : [iso_code],
+            "Variable" : [var_name],
+            "Year" : [forest_layer_year],
+            "Unit" : [var_unit],
+            "Value" : [total_area]
+        }
+    )
+
+    return total_area_df
