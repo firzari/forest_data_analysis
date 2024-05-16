@@ -3,14 +3,6 @@ import xarray as xr
 import geopandas as gpd
 import pandas as pd
 
-### DIRECTORY ### 
-
-# # Specify the desired output folder path for processed dataset
-# output_data_dir = Path.cwd() / ".." / "output_data"
-
-# # Check if the output folder exists, and create if not
-# Path.mkdir(output_data_dir, exist_ok=True, parents=True)
-
 ### FUNCTIONS ###
 
 # Importing NetCDF file 
@@ -93,7 +85,7 @@ def clip_array(
 def define_class(
         iso_code: str, 
         xarray_id: str,
-        iso_forest_cover_area: xr.DataArray,
+        forest_layer_year: int,
         start_step: float,
         end_step: float,
         delta_diff: float,
@@ -110,8 +102,8 @@ def define_class(
             File name of the forest data that can be identified in the words following
             the naming convention "Forest4model_v1_" i.e. "Canopy_height" is the words following
             "Forest4model_v1_Canopy_height.nc"
-        iso_forest_cover_area (xr.DataArray): 
-            Total forest area calculated from "Forest4model_v1_Forest_cover.nc"
+        forest_layer_year (int): 
+            The data acquisition year as shown in the attribute table of xarray_id
         start_step (float): 
             The starting value to initiate the creation of the first bin class, which is usually the minimum value
             of the dataset. 
@@ -160,7 +152,7 @@ def define_class(
 
         # print(calc_area)
 
-        column_name = f">{round(start, 1)} to <= {round(end, 1)}"
+        column_name = f"Forest fraction >{round(start, 1)} to <= {round(end, 1)}"
         area_series = pd.Series(calc_area, name=column_name)
 
         area.append(area_series)
@@ -172,20 +164,31 @@ def define_class(
     forest_class_df = pd.DataFrame(area)
 
     # Rename column
-    forest_class_df.rename(columns={0 : "Count pixels (Mha)"}, inplace=True)
+    forest_class_df.rename(columns={0 : "Value"}, inplace=True)
 
-    # Add a column for forest cover area 
-    forest_class_df["Forest cover (Mha)"] = round(iso_forest_cover_area, 2)
+    # Reset index and rename it into variable
+    forest_class_df = forest_class_df.reset_index()
+    forest_class_df.rename(columns={"index" : "Variable"}, inplace=True)
 
     # Add a column for iso code
-    forest_class_df["ISO3"] = iso_code
+    forest_class_df.insert(
+        loc=0,
+        column="Region",
+        value=iso_code
+    )
 
-    # Calculate percentage area of each fraction class over forest cover
-    forest_class_df["Perc. Forest Cover (%)"] = (
-        forest_class_df["Count pixels (Mha)"] / forest_class_df["Forest cover (Mha)"]
-        ) * 100
+    # Add a column for year
+    forest_class_df.insert(
+        loc=2,
+        column="Year",
+        value=forest_layer_year
+    )
 
-    # # Export dataframe to excel
-    # forest_class_df.to_csv(output_data_dir/f"{iso_code}_{xarray_id}_class.csv")
+    # Add a column for unit
+    forest_class_df.insert(
+        loc=3,
+        column="Unit",
+        value="Million hectares"
+    )
 
     return forest_class_df
