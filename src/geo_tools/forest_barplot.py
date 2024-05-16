@@ -11,7 +11,7 @@ import pandas as pd
 # Geospatial
 import xarray as xr
 import geopandas as gpd
-from utils import define_class, clip_array, import_forest
+from geo_tools.utils import define_class, clip_array, import_forest
 
 # Plotting
 import matplotlib.pyplot as plt
@@ -105,10 +105,11 @@ def add_value_labels(ax, spacing=5):
                                         # positive and negative values.
 
 # Plot forest fraction classes
-def plot_fraction_class(fraction_class_df, iso_code, xarray_id, unit):
+def plot_fraction_class(fraction_class_df, iso_code, xarray_id):
+    
     fig, ax = plt.subplots(figsize = (8,5))
 
-    ax.bar(fraction_class_df.index, fraction_class_df["Perc. Forest Cover (%)"])
+    ax.bar(fraction_class_df["Variable"], fraction_class_df["Value"])
 
     # Set xticks size
     ax.tick_params(axis='x', labelsize=8, rotation=345)
@@ -120,13 +121,11 @@ def plot_fraction_class(fraction_class_df, iso_code, xarray_id, unit):
     x_label = get_file_description(xarray_id) # Need to strip Mg ha-1 in Forest_agb
     ax.set(
         ylabel = "Percentage of area over forest cover (%)",
-        xlabel = f"Classes of {x_label} ({unit})",
+        xlabel = f"Classes of {x_label}",
         title = f"{iso_code}\n{x_label}"
     )
 
     plt.tight_layout()
-
-    plt.savefig(output_figure_dir/f"{iso_code}_{xarray_id}_class_bar.png", dpi=300)
 
     return print("Data description:", x_label)
 
