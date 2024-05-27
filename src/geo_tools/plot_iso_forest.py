@@ -203,8 +203,8 @@ def agg_area_forest_type(iso_code: str, xarray_id: str, forest_type_cat: int, fo
     return total_area_df
 
 
-# Average canopy height
-def avg_canopy_height(iso_code: str, xarray_id: str, forest_layer_year: int):
+# Calculate average
+def average_values(iso_code: str, xarray_id: str, forest_layer_year: int):
 
     # Clip array here
     country_forest, border = clip_array(
@@ -212,28 +212,39 @@ def avg_canopy_height(iso_code: str, xarray_id: str, forest_layer_year: int):
         xarray_id
     )
 
-    avg_height = (
-        country_forest
-        .mean(["latitude", "longitude"])
-        .values
-        .flatten()[0]
-    )
+    if xarray_id == "Canopy_height":
+        avg_vals = (
+            country_forest
+            .mean(["latitude", "longitude"])
+            .values
+            .flatten()[0]
+        )
+        var_unit = "Meters"
+
+    elif xarray_id == "Forest_agb":
+        agb_above_zero = country_forest.where(country_forest > 0)
+        avg_vals = (
+            agb_above_zero
+            .mean(["latitude", "longitude"])
+            .values
+            .flatten()[0]
+        )
+        var_unit = "t/ha"
 
     # Identify the variable name and the unit
     var_name = xarray_id.replace("_", " ")
-    var_unit = "Meters"
 
-    avg_height_df = pd.DataFrame(
+    avg_vals_df = pd.DataFrame(
         {
             "Region" : [iso_code],
             "Variable" : [var_name],
             "Year" : [forest_layer_year],
             "Unit" : [var_unit],
-            "Value" : [avg_height]
+            "Value" : [avg_vals]
         }
     )
 
-    return avg_height_df
+    return avg_vals_df
 
 
 def agg_area_natural_forest(iso_code: str, xarray_id: str, forest_layer_year: int, natural_forest:int = 2):
