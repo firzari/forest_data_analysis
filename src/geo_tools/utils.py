@@ -79,6 +79,8 @@ def clip_array(
         *border.total_bounds
     ).rio.clip(border.geometry, crs=ds_reproject.rio.crs)
 
+    xarray_input.close()
+
     return country_forest, border
 
 # Calculate area for each histogram bin
