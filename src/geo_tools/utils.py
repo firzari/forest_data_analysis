@@ -140,10 +140,20 @@ def define_class(
     area = []
     delta_step = delta_diff
 
+    if xarray_id == "Forest_fragment":
+        country_forest_clean = country_forest.where(country_forest < 28)
+        country_forest.close()
+
+    else: 
+        country_forest_clean = country_forest
+        country_forest.close()
+
     while end <= max_val:
         # print(start, end)
 
-        forest_data = country_forest.where((country_forest > start) & (country_forest <= end))
+        forest_data = country_forest_clean.where(
+            (country_forest_clean > start) & (country_forest_clean <= end)
+        )
 
         calc_area = (
             forest_data
@@ -154,7 +164,7 @@ def define_class(
 
         # print(calc_area)
 
-        column_name = f"Forest fraction >{round(start, 1)} to <= {round(end, 1)}"
+        column_name = f"{xarray_id} >{round(start, 1)} to <= {round(end, 1)}"
         area_series = pd.Series(calc_area, name=column_name)
 
         area.append(area_series)

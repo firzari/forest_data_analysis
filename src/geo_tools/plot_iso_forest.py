@@ -117,8 +117,11 @@ def agg_total_area(
         xarray_id
     )
 
-    # Don't forget to select area where values > 0
-    country_forest_clean = country_forest.where(country_forest > 0)
+    # Removing fill_value in Forest_fragment
+    if xarray_id == "Forest_fragment":
+        country_forest_clean = country_forest.where(country_forest < 28)
+    else:
+        country_forest_clean = country_forest.where(country_forest > 0)
 
     convert_to_mha = 1e+6
 
@@ -153,6 +156,9 @@ def agg_total_area(
             "Value" : [total_area]
         }
     )
+
+    # TODO: add a unique identifier for variable
+    # uid = xarray_id; characters are in lower cases, spaces are replaced by "_"
 
     return total_area_df
 
