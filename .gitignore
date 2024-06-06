@@ -80,3 +80,6 @@ target/
 
 # Project folders
 input_data/
+
+# Data format
+**.txt
