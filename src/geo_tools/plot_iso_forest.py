@@ -14,6 +14,9 @@ from geo_tools.utils import clip_array
 # Plotting
 import matplotlib.pyplot as plt
 
+### TODO: THIS SCRIPT IS FOR PLOTS
+### STATS CALCULATION TO BE MOVED TO CALCULAT_STATS.PY
+
 ### PIPELINE ###
 
 # Plotting forest cover
@@ -88,6 +91,31 @@ def plot_forest_type(iso_code:str, xarray_id: xr.DataArray, forest_type_cat: int
     ax.axis("off")
     ax.set(title=f"{xarray_id}_{iso_code} in 2020")
 
+
+# Plotting fragmentation change
+def plot_fragment_change(iso_code:str, xarray_id: xr.DataArray) -> plt:
+
+    # Clip array here
+    country_forest, border = clip_array(
+        iso_code,
+        xarray_id
+    )
+
+    # Figure template
+    figure, ax = plt.subplots()
+
+    # Data distribution
+    country_forest.plot.imshow(cmap='viridis', ax=ax)
+
+    # Plot administration border
+    border.boundary.plot(ax=ax, edgecolor="black", linewidth=0.5)
+
+    # Additional information
+    ax.axis("off")
+    ax.set(title=f"{xarray_id}_{iso_code} in 2020")
+
+
+### TODO: TO BE MOVED TO CALCULATE_STATS.PY
 
 # Calculate total area for forest cover
 def agg_total_area(
