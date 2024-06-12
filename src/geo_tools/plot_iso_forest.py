@@ -154,7 +154,7 @@ def agg_total_area(
     convert_to_mha = 1e+6
 
     # Using the count function for canopy height because it contains non-binary values
-    if xarray_id == "Canopy_height":
+    if xarray_id == "Canopy_height" or xarray_id == "Forest_extent_gain" or xarray_id == "Forest_extent_loss":
         total_area = (
             country_forest_clean
             .count(["latitude", "longitude"])
