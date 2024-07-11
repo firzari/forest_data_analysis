@@ -1,0 +1,257 @@
+,Region,Variable,Var_uid,Year,Unit,Value
+0,BGR,Canopy height,canopy_height,2020,Meters,17.097070693969727
+0,CYP,Canopy height,canopy_height,2020,Meters,9.48450756072998
+0,DNK,Canopy height,canopy_height,2020,Meters,18.07276153564453
+0,IRL,Canopy height,canopy_height,2020,Meters,16.207054138183594
+0,EST,Canopy height,canopy_height,2020,Meters,20.0635986328125
+0,AUT,Canopy height,canopy_height,2020,Meters,20.460241317749023
+0,CZE,Canopy height,canopy_height,2020,Meters,19.82831382751465
+0,FIN,Canopy height,canopy_height,2020,Meters,19.259748458862305
+0,FRA,Canopy height,canopy_height,2020,Meters,16.88187599182129
+0,DEU,Canopy height,canopy_height,2020,Meters,20.269926071166992
+0,GRC,Canopy height,canopy_height,2020,Meters,10.690534591674805
+0,HRV,Canopy height,canopy_height,2020,Meters,18.741825103759766
+0,HUN,Canopy height,canopy_height,2020,Meters,17.258085250854492
+0,ISL,Canopy height,canopy_height,2020,Meters,
+0,ITA,Canopy height,canopy_height,2020,Meters,14.822790145874023
+0,LVA,Canopy height,canopy_height,2020,Meters,19.84176254272461
+0,LTU,Canopy height,canopy_height,2020,Meters,19.636560440063477
+0,SVK,Canopy height,canopy_height,2020,Meters,20.5098819732666
+0,LIE,Canopy height,canopy_height,2020,Meters,18.938695907592773
+0,MLT,Canopy height,canopy_height,2020,Meters,5.916666507720947
+0,BEL,Canopy height,canopy_height,2020,Meters,18.544912338256836
+0,LUX,Canopy height,canopy_height,2020,Meters,20.317052841186523
+0,NLD,Canopy height,canopy_height,2020,Meters,17.247177124023438
+0,NOR,Canopy height,canopy_height,2020,Meters,20.174522399902344
+0,POL,Canopy height,canopy_height,2020,Meters,19.03644561767578
+0,PRT,Canopy height,canopy_height,2020,Meters,9.21022891998291
+0,ROU,Canopy height,canopy_height,2020,Meters,20.227886199951172
+0,SVN,Canopy height,canopy_height,2020,Meters,22.29575538635254
+0,ESP,Canopy height,canopy_height,2020,Meters,10.242086410522461
+0,SWE,Canopy height,canopy_height,2020,Meters,20.193086624145508
+0,CHE,Canopy height,canopy_height,2020,Meters,19.42002296447754
+0,GBR,Canopy height,canopy_height,2020,Meters,16.278108596801758
+0,BGR,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.017284058899682944
+1,BGR,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.17805780948501196
+2,BGR,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.19250510667847714
+3,BGR,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.25001775920833075
+4,BGR,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.29481046937950045
+5,BGR,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.06496137190971653
+6,BGR,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0012257478076438532
+0,CYP,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.035014198326223746
+1,CYP,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.6423648031624114
+2,CYP,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.27423410350392174
+3,CYP,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.04641038792078961
+4,CYP,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.0008131200040030523
+5,CYP,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.0
+6,CYP,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,DNK,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.0037194702442380463
+1,DNK,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.05250496884913809
+2,DNK,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.17590442609792456
+3,DNK,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.4184153193441119
+4,DNK,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.3458629553185797
+5,DNK,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.0
+6,DNK,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,IRL,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.01015166368721527
+1,IRL,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.11088633873479037
+2,IRL,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.24241277896315092
+3,IRL,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.5026261461276743
+4,IRL,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.11822155585029698
+5,IRL,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.0003044807104549911
+6,IRL,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,EST,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.0043570153388165144
+1,EST,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.029320028600080043
+2,EST,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.08886305688088247
+3,EST,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.24971872091088554
+4,EST,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.6235950660365056
+5,EST,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.0002806045589247089
+6,EST,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,AUT,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.005326399748711918
+1,AUT,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.0810453697653782
+2,AUT,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.13446500419936136
+3,AUT,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.202201465114457
+4,AUT,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.3447120840567143
+5,AUT,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.22835981702200225
+6,AUT,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.00329106555293482
+0,CZE,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.008787175656255732
+1,CZE,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.08916236463974272
+2,CZE,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.12712333743502444
+3,CZE,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.21495680759032476
+4,CZE,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.41443611245163003
+5,CZE,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.1439301798392683
+6,CZE,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0008685672157946567
+0,FIN,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.00261286480212344
+1,FIN,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.030406067525486156
+2,FIN,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.12919696782727932
+3,FIN,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.36147124254374546
+4,FIN,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.46950129638674315
+5,FIN,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.003843360671348937
+6,FIN,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,FRA,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.017709606046088386
+1,FRA,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.16544453759953737
+2,FRA,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.19500560938549769
+3,FRA,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.27756748980176155
+4,FRA,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.3146778448053476
+5,FRA,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.02392032617354156
+6,FRA,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,6.449198740209267e-05
+0,DEU,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.004247490500029995
+1,DEU,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.06734826125282324
+2,DEU,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.09529771076529953
+3,DEU,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.22593568827019206
+4,DEU,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.48850464445980557
+5,DEU,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.11627239066319546
+6,DEU,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,9.371610290179427e-05
+0,GRC,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.0904672750829335
+1,GRC,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.510673149479619
+2,GRC,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.2033084414197645
+3,GRC,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.1276453293847972
+4,GRC,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.0634704642852058
+5,GRC,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.00204699802098609
+6,GRC,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,HRV,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.022940722804485714
+1,HRV,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.15144993481321398
+2,HRV,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.13310848529124045
+3,HRV,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.178269555587067
+4,HRV,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.37257224843853864
+5,HRV,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.1405072902101354
+6,HRV,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0005313067093626653
+0,HUN,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.018410252866718005
+1,HUN,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.14514565285375303
+2,HUN,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.2024030779686034
+3,HUN,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.2630591765251467
+4,HUN,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.3389177672047603
+5,HUN,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.030281745825387542
+6,HUN,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,7.123608136015324e-07
+0,ISL,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,
+1,ISL,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,
+2,ISL,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,
+3,ISL,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,
+4,ISL,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,
+5,ISL,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,
+6,ISL,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,
+0,ITA,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.026305222023829324
+1,ITA,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.28153969836527315
+2,ITA,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.2322264523807013
+3,ITA,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.241592039478114
+4,ITA,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.1797381808623953
+5,ITA,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.03596204376956606
+6,ITA,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0014915432434778448
+0,LVA,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.003928417617871239
+1,LVA,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.032288680864034164
+2,LVA,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.09841761106760566
+3,LVA,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.2679899959382312
+4,LVA,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.5932118113788039
+5,LVA,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.0006579112983168493
+6,LVA,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,LTU,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.002734390358338292
+1,LTU,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.028192109794999358
+2,LTU,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.09481509052163634
+3,LTU,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.303562413665661
+4,LTU,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.5648665438218033
+5,LTU,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.0003685345900904561
+6,LTU,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,SVK,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.007989606036565473
+1,SVK,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.07710459505208862
+2,SVK,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.11140421078373706
+3,SVK,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.1930660163871821
+4,SVK,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.43240939327788264
+5,SVK,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.17295147185035845
+6,SVK,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.003819503400812579
+0,LIE,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.012413548501507358
+1,LIE,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.14311048058166342
+2,LIE,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.16350416740556836
+3,LIE,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.20695158716084414
+4,LIE,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.28639829757049123
+5,LIE,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.190104628480227
+6,LIE,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0070934562865756345
+0,MLT,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.39999999999999997
+1,MLT,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.7999999999999999
+2,MLT,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.0
+3,MLT,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.0
+4,MLT,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.0
+5,MLT,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.0
+6,MLT,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,BEL,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.006803766312033463
+1,BEL,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.1316792071173273
+2,BEL,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.13905878000608626
+3,BEL,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.24029780835486395
+4,BEL,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.43547386196156124
+5,BEL,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.04359720987403858
+6,BEL,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,5.966907530833995e-06
+0,LUX,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.005305703301911633
+1,LUX,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.06451103270314393
+2,LUX,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.0944362525672758
+3,LUX,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.20471062193901735
+4,LUX,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.5820475011848966
+5,LUX,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.03931223339828322
+6,LUX,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,NLD,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.00415773042340969
+1,NLD,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.11127268684185118
+2,NLD,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.18199214098246497
+3,NLD,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.39140306577757755
+4,NLD,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.306492906110196
+5,NLD,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.0
+6,NLD,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,NOR,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.0029438394643078636
+1,NOR,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.03740770626130932
+2,NOR,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.12161179156761324
+3,NOR,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.29084892104371124
+4,NOR,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.45322757736240393
+5,NOR,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.09152713365391633
+6,NOR,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,POL,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.006117350992484036
+1,POL,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.06533574180815814
+2,POL,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.1204090054730326
+3,POL,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.3087733064026146
+4,POL,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.46418437648913563
+5,POL,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.031999581777244344
+6,POL,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.00023175708003424802
+0,PRT,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.09227611092169564
+1,PRT,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.5898294945132654
+2,PRT,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.26367500726092613
+3,PRT,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.04802944779078431
+4,PRT,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.0048214127868065814
+5,PRT,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,2.367693298480888e-06
+6,PRT,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,ROU,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.008332000657051619
+1,ROU,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.10131909625010221
+2,ROU,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.12952528020574108
+3,ROU,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.18915217185228497
+4,ROU,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.3519629417098249
+5,ROU,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.20239505445640918
+6,ROU,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.016279394557325945
+0,SVN,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.003589778178902211
+1,SVN,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.05480166288203623
+2,SVN,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.08895755111392326
+3,SVN,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.14067155510304152
+4,SVN,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.3522265082582028
+5,SVN,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.3485478688837
+6,SVN,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.010462067510955086
+0,ESP,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.10232076404400946
+1,ESP,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.5108591452667663
+2,ESP,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.22828878373415076
+3,ESP,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.11960767555156189
+4,ESP,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.03613535932659902
+5,ESP,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.0002965417514616303
+6,ESP,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,SWE,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.002079368076978777
+1,SWE,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.02757317400272477
+2,SWE,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.11252077758137347
+3,SWE,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.298324509616132
+4,SWE,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.49929656870196487
+5,SWE,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.058479484651584354
+6,SWE,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
+0,CHE,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.010238235873203386
+1,CHE,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.10372420110086718
+2,CHE,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.15460185589426195
+3,CHE,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.22285497829939135
+4,CHE,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.3243738068945444
+5,CHE,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.17712854293467561
+6,CHE,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.002056635592422336
+0,GBR,Canopy height >0 to <= 5.0,canopy_height,2020,Percentage share,0.010768978903234578
+1,GBR,Canopy height >5.0 to <= 10.0,canopy_height,2020,Percentage share,0.14415891805198303
+2,GBR,Canopy height >10.0 to <= 15.0,canopy_height,2020,Percentage share,0.20921342889726877
+3,GBR,Canopy height >15.0 to <= 20.0,canopy_height,2020,Percentage share,0.43792811616401256
+4,GBR,Canopy height >20.0 to <= 25.0,canopy_height,2020,Percentage share,0.18268139527785407
+5,GBR,Canopy height >25.0 to <= 30.0,canopy_height,2020,Percentage share,0.00022586830268572395
+6,GBR,Canopy height >30.0 to <= 35.0,canopy_height,2020,Percentage share,0.0
