@@ -83,9 +83,17 @@ def yearly_disturbance(
         value="Disturbance Year"
     )
 
+    # Add a column for var_uid 
+    var_uid = xarray_id.lower()
+    dist_year_df.insert(
+        loc=2,
+        column="Var_uid",
+        value=var_uid
+    )
+
     # Add a column for unit
     dist_year_df.insert(
-        loc=3,
+        loc=4,
         column="Unit",
         value="Million hectares"
     )

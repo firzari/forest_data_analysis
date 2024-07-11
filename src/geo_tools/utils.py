@@ -164,8 +164,13 @@ def define_class(
 
         # print(calc_area)
 
-        column_name = f"{xarray_id} >{round(start, 1)} to <= {round(end, 1)}"
+        var_name = xarray_id.replace("_", " ")
+        column_name = f"{var_name} >{round(start, 1)} to <= {round(end, 1)}"
         area_series = pd.Series(calc_area, name=column_name)
+
+        # # Prepare var_uid for the classes
+        # lower = xarray_id.lower()
+        # var_uid = f"{lower}_{round(start, 1)}_{round(end, 1)}"
 
         area.append(area_series)
 
@@ -189,16 +194,24 @@ def define_class(
         value=iso_code
     )
 
-    # Add a column for year
+    # Add a column for var_uid
+    var_uid = xarray_id.lower()
     forest_class_df.insert(
         loc=2,
+        column="Var_uid",
+        value=var_uid
+    )
+
+    # Add a column for year
+    forest_class_df.insert(
+        loc=3,
         column="Year",
         value=forest_layer_year
     )
 
     # Add a column for unit
     forest_class_df.insert(
-        loc=3,
+        loc=4,
         column="Unit",
         value="Million hectares"
     )

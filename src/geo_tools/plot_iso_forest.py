@@ -173,12 +173,14 @@ def agg_total_area(
 
     # Remove underscore in xarray_id
     var_name = xarray_id.replace("_", " ")
+    var_uid = xarray_id.lower()
     var_unit = "Million hectares"
 
     total_area_df = pd.DataFrame(
         {
             "Region" : [iso_code],
             "Variable" : [var_name],
+            "Var_uid" : [var_uid],
             "Year" : [forest_layer_year],
             "Unit" : [var_unit],
             "Value" : [total_area]
@@ -207,7 +209,7 @@ def agg_area_forest_type(iso_code: str, xarray_id: str, forest_type_cat: int, fo
 
     total_area = (
         sel_forest_type
-        .sum(["latitude", "longitude"])
+        .count(["latitude", "longitude"])
         .values
         .flatten()[0]
     ) / convert_to_mha
@@ -215,12 +217,19 @@ def agg_area_forest_type(iso_code: str, xarray_id: str, forest_type_cat: int, fo
     # Identify variable names
     if forest_type_cat == 1:
         var_name = xarray_id.replace("_", " ") + ": Undefined"
+        var_uid = xarray_id.lower() + "_undefined"
+
     elif forest_type_cat == 2:
         var_name = xarray_id.replace("_", " ") + ": Broadleaved"
+        var_uid = xarray_id.lower() + "_broadleaved"
+
     elif forest_type_cat == 3:
         var_name = xarray_id.replace("_", " ") + ": Coniferous"
+        var_uid = xarray_id.lower() + "_coniferous"
+
     elif forest_type_cat == 4:
         var_name = xarray_id.replace("_", " ") + ": Mixed"
+        var_uid = xarray_id.lower() + "_mixed"
 
     var_unit = "Million hectares"
 
@@ -228,6 +237,7 @@ def agg_area_forest_type(iso_code: str, xarray_id: str, forest_type_cat: int, fo
         {
             "Region" : [iso_code],
             "Variable" : [var_name],
+            "Var_uid" : [var_uid],
             "Year" : [forest_layer_year],
             "Unit" : [var_unit],
             "Value" : [total_area]
@@ -267,11 +277,13 @@ def average_values(iso_code: str, xarray_id: str, forest_layer_year: int):
 
     # Identify the variable name and the unit
     var_name = xarray_id.replace("_", " ")
+    var_uid = xarray_id.lower()
 
     avg_vals_df = pd.DataFrame(
         {
             "Region" : [iso_code],
             "Variable" : [var_name],
+            "Var_uid" : [var_uid],
             "Year" : [forest_layer_year],
             "Unit" : [var_unit],
             "Value" : [avg_vals]
@@ -303,12 +315,14 @@ def agg_area_natural_forest(iso_code: str, xarray_id: str, forest_layer_year: in
 
     # Identify the variable name and the unit
     var_name = xarray_id.replace("_", " ")
+    var_uid = xarray_id.lower()
     var_unit = "Million hectares"
 
     total_area_df = pd.DataFrame(
         {
             "Region" : [iso_code],
             "Variable" : [var_name],
+            "Var_uid" : [var_uid],
             "Year" : [forest_layer_year],
             "Unit" : [var_unit],
             "Value" : [total_area]
