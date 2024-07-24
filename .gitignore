@@ -81,6 +81,7 @@ target/
 
 # Project folders
 input_data/
+output_figures/
 
 # Data format
 **.txt
