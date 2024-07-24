@@ -15,6 +15,6 @@ dependencies:
   - pip
   - pip:
     - geopandas
-    - pyam
+    - pyam-iamc
     - xlsxwriter
     - -e.
