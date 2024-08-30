@@ -61,9 +61,13 @@ def plot_forest(iso_code:str, xarray_id: xr.DataArray) -> plt:
     # Plot administration border
     border.boundary.plot(ax=ax, edgecolor="black", linewidth=0.5)
 
+    # Get the year automatically
+    year = non_zero.time.dt.year.item()
+
     # Additional information
     ax.axis("off")
-    ax.set(title=f"{xarray_id}_{iso_code} in 2020")
+    xarray_title = xarray_id.replace("_", " ")
+    ax.set(title=f"{xarray_title} in {iso_code} in {year}")
 
 
 # Plotting forest_type
