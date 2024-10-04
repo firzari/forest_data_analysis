@@ -80,6 +80,9 @@ target/
 
 # Project folders
 input_data/
+output_data/
+output_figures/
+_archive
 
 # Data format
 **.txt
